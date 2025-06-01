@@ -1,0 +1,36 @@
+:root {
+    /* Fonts */
+    --font:"Figtree", sans-serif;
+
+    /* Font Sizes */
+    --h1mobilefontsize: 15px;
+    --h1desktopfontsize: 30px;
+
+    --h2mobilefontsize: 13px;
+    --h2desktopfontsize: 23px;
+
+    --h3mobilefontsize: 15px;
+    --h3desktopfontsize: 20px;
+
+    --pmobilefontsize: 12px;
+    --pdesktopfontsize: 20px;
+
+    /* Font Weights */
+
+    --lightweight: 300;
+    --regularweight: 400;
+    --mediumweight: 500;
+    --semibold: 600;
+    --boldweight: 700;
+    --extraboldweight: 800;
+
+
+    /* Colors */
+    --backgroundcolor1: #2C2F3A;
+    --backgroundcolor2: #484d5f;
+    --fontcolor: #F5F5F5;
+    --bordercolor: #B4A9A1;
+    --hovercolor: red;
+
+    /* Spacings and Borders*/
+}

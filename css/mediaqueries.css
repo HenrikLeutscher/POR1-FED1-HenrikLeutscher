@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+    /* Fonts / Text */
+
+    body h1 {
+        font-size: var(--h1desktopfontsize);
+        font-weight: var(--boldweight);
+    }
+
+    body h2 {
+        font-size: var(--h2desktopfontsize);
+    }
+
+    body h3 {
+        font-size: var(--h3desktopfontsize);
+    }
+
+    body p {
+        font-size: var(--pdesktopfontsize);
+    }
+
+
+    header {
+        flex-direction: row;
+        padding: 50px;
+        justify-content: space-evenly;
+    }
+
+    .HeaderText {
+        display: flex;
+        flex-direction: column;
+        justify-items: space-evenly;
+    }
+}

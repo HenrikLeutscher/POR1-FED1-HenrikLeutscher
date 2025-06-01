@@ -1,0 +1,217 @@
+@import url("../css/variables.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+/* Font */
+
+html, body {
+    margin: 0 auto;
+    overflow-x: hidden;
+    max-width: 1980px;
+    background-color: var(--backgroundcolor2);
+    text-decoration: none;
+    font-family: var(--font);
+    color: var(--fontcolor);
+    border-width: 0;
+    border-style: inset;
+}
+
+body a {
+    text-decoration: none;
+    color: var(--fontcolor);
+}
+
+body a:hover {
+    text-decoration: underline;
+    color: var(--hovercolor);
+}
+
+header {
+    background-color: var(--backgroundcolor1);
+}
+
+/* Fonts / Text */
+
+body h1 {
+    font-size: var(--h1mobilefontsize);
+    font-weight: var(--boldweight);
+}
+
+body h2 {
+    font-size: var(--h2mobilefontsize);
+}
+
+body h2,
+body h3 {
+    font-weight: var(--semiboldweight);
+}
+
+body h3 {
+    font-size: var(--h3mobilefontsize);
+}
+
+body p {
+    font-size: var(--pmobilefontsize);
+    font-weight: var(--regularweight);
+}
+
+header {
+    height: 100vh;
+    min-height: 500px;
+}
+
+.Projects {
+    padding-bottom: 20px;
+}
+
+header,
+.HeaderText,
+.Projects,
+.Skills,
+.InformationCardStatic,
+.AboutMe,
+.ContactInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.InformationCardSkills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+header img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.ProjectCardDropdown {
+    display: none;
+}
+
+@keyframes DropDownAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-35px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-18px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-5px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+
+.ProjectCardDropdown.show {
+    display: flex;
+    justify-content: center;
+    animation: DropDownAnim 1s ease 0s 1 normal forwards;
+    padding-bottom: 20px;
+    margin-top: -8px;
+}
+
+.ProjectCard,
+.ProjectCardDropdown,
+.InformationCardStatic,
+.InformationCardSkills {
+    justify-content: center;
+    width: 90%;
+    max-width: 500px;
+    border-color: var(--bordercolor);
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.RainyDaysDropdown,
+.ScienceMuseumDropdown,
+.ProjectCardDropdown {
+    flex-direction: column;
+    align-items: center;
+}
+
+.RainyDaysDropdown img,
+.ScienceMuseumDropdown img,
+.ProjectCardDropdown img {
+    margin: 20px;
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 0% 50%;
+}
+
+.RainyDays,
+.ScienceMuseum,
+.ProjectCard {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.RainyDays svg,
+.ScienceMuseum svg,
+.ProjectCard svg {
+    position: inherit;
+}
+
+.AboutMe img {
+    margin: 20px;
+    width: calc(10rem);
+    object-fit: cover;
+}
+
+.InformationCard {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 500px;
+    border-bottom: 2px solid var(--bordercolor);
+}
+
+.PortFolioNav {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 500px;
+    border-bottom: 3px var(--bordercolor) solid;
+    margin-bottom: 30px;
+}
