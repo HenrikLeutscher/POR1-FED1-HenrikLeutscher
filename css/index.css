@@ -3,18 +3,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 /* Font */
 
+/* Animations */
+
+@keyframes DropDownAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes textAnim {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
 html, body {
     margin: 0 auto;
     overflow-x: hidden;
     max-width: 1980px;
     background-color: var(--backgroundcolor2);
-    text-decoration: none;
     font-family: var(--font);
-    color: var(--fontcolor);
     border-width: 0;
     border-style: inset;
 }
 
+header,
+.HeaderText,
+.Projects,
+.Skills,
+.InformationCardStatic,
+.AboutMe,
+.ContactInfo,
+.Navigation,
+footer,
+.ProjectCardDropdown.show,
+.Descrip,
+.RainyDays,
+.ScienceMuseum,
+.ProjectCard,
+.InformationCard,
+.Phone,
+.PortFolioNav {
+    display: flex;
+}
+
+html,
+body,
 body a {
     text-decoration: none;
     color: var(--fontcolor);
@@ -26,7 +72,26 @@ body a:hover {
 }
 
 header {
-    background-color: var(--backgroundcolor1);
+    height: 100vh;
+    min-height: 500px;
+}
+
+header,
+footer {
+    background-color: var(--headerfootercolor);
+}
+
+footer {
+    align-items: center;
+    height: 50px;
+    padding-left: 20px;
+}
+
+header img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 100%;
 }
 
 /* Fonts / Text */
@@ -34,9 +99,11 @@ header {
 body h1 {
     font-size: var(--h1mobilefontsize);
     font-weight: var(--boldweight);
+    animation: textAnim 1s ease 0s 1 normal forwards;
 }
 
 body h2 {
+    animation: textAnim 2s ease 0s 1 normal forwards;
     font-size: var(--h2mobilefontsize);
 }
 
@@ -46,21 +113,26 @@ body h3 {
 }
 
 body h3 {
+    animation: textAnim 3s ease 0s 1 normal forwards;
     font-size: var(--h3mobilefontsize);
 }
 
 body p {
+    animation: textAnim 4s ease 0s 1 normal forwards;
     font-size: var(--pmobilefontsize);
     font-weight: var(--regularweight);
 }
 
-header {
-    height: 100vh;
-    min-height: 500px;
+.Navigation {
+    justify-content: space-evenly;
 }
 
-.Projects {
+.Projects,
+.Skills,
+.AboutMe,
+.ContactInfo {
     padding-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 header,
@@ -70,7 +142,6 @@ header,
 .InformationCardStatic,
 .AboutMe,
 .ContactInfo {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -84,67 +155,34 @@ header,
     align-items: center;
 }
 
-header img {
-    height: 250px;
-    width: 250px;
-    object-fit: cover;
-    border-radius: 100%;
-}
-
 .ProjectCardDropdown {
     display: none;
 }
 
-@keyframes DropDownAnim {
-	0% {
-		animation-timing-function: ease-in;
-		opacity: 0;
-		transform: translateY(-100px);
-	}
+.ProjectCardDropdown,
+.ProjectCard,
+.Skills,
+.InformationCardStatic,
+.AboutMe,
+.ContactInfo {
+    background-color: var(--headerfootercolor);
+}
 
-	38% {
-		animation-timing-function: ease-out;
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	55% {
-		animation-timing-function: ease-in;
-		transform: translateY(-35px);
-	}
-
-	72% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
-
-	81% {
-		animation-timing-function: ease-in;
-		transform: translateY(-18px);
-	}
-
-	90% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
-
-	95% {
-		animation-timing-function: ease-in;
-		transform: translateY(-5px);
-	}
-
-	100% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
+.ProjectCard:hover {
+    cursor: pointer;
+    background-color: var(--hovercolor);
 }
 
 .ProjectCardDropdown.show {
-    display: flex;
     justify-content: center;
     animation: DropDownAnim 1s ease 0s 1 normal forwards;
     padding-bottom: 20px;
     margin-top: -8px;
+}
+
+.Descrip {
+    justify-content: center;
+    width: 80%;
 }
 
 .ProjectCard,
@@ -154,9 +192,7 @@ header img {
     justify-content: center;
     width: 90%;
     max-width: 500px;
-    border-color: var(--bordercolor);
-    border-style: solid;
-    border-width: 2px;
+    border-bottom: 2px solid var(--bordercolor);
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -181,9 +217,21 @@ header img {
 .RainyDays,
 .ScienceMuseum,
 .ProjectCard {
-    border-radius: 20px;
-    display: flex;
     align-items: center;
+}
+
+.PortfolioSticky {
+    position: fixed;
+    bottom: 0;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ProjectCardDropdown {
+    border-radius: 20px;
 }
 
 .RainyDays svg,
@@ -199,16 +247,36 @@ header img {
 }
 
 .InformationCard {
-    display: flex;
     justify-content: center;
     width: 90%;
     max-width: 500px;
     border-bottom: 2px solid var(--bordercolor);
 }
 
+.Phone {
+    flex-direction: row;
+    align-items: center;
+}
+
+.Phone button {
+    background-color: transparent;
+    border-style: none;
+    border-radius: 20px;
+    font-size: var(--h1mobilefontsize);
+    padding: 5px 20px 5px 20px;
+    margin-left: 20px;
+}
+
+.Phone button:hover {
+    background-color: var(--hovercolor);
+}
+
+.confirmation {
+    display: none;
+}
+
 .PortFolioNav {
     margin-top: auto;
-    display: flex;
     justify-content: center;
     width: 90%;
     max-width: 500px;

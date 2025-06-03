@@ -3,16 +3,16 @@
     --font:"Figtree", sans-serif;
 
     /* Font Sizes */
-    --h1mobilefontsize: 15px;
+    --h1mobilefontsize: calc(4vw);
     --h1desktopfontsize: 30px;
 
-    --h2mobilefontsize: 13px;
+    --h2mobilefontsize: calc(3vw);
     --h2desktopfontsize: 23px;
 
-    --h3mobilefontsize: 15px;
+    --h3mobilefontsize: calc(3vw);
     --h3desktopfontsize: 20px;
 
-    --pmobilefontsize: 12px;
+    --pmobilefontsize: calc(2vw);
     --pdesktopfontsize: 20px;
 
     /* Font Weights */
@@ -25,12 +25,21 @@
     --extraboldweight: 800;
 
 
-    /* Colors */
-    --backgroundcolor1: #2C2F3A;
-    --backgroundcolor2: #484d5f;
-    --fontcolor: #F5F5F5;
-    --bordercolor: #B4A9A1;
-    --hovercolor: red;
+    /* Colors Dark */
+    --headerfootercolor: #1C1C1B;
+    --backgroundcolor2: #252524;
+    --backgroundcolor3: #2F2F2E;
+    --fontcolor: #E3E3E1;
+    --bordercolor: #3E3E3C;
+    --hovercolor: #8C7E63;
+
+    /* Colors Light */
+    --lightheaderfootercolor: #E6E5E2;
+    --lightbackgroundcolor2: #F2F1EF;
+    --lightbackgroundcolor3: #EAE9E6;
+    --lightfontcolor: #1F1F1D;
+    --lightbordercolor: #B0AFAC;
+    --lighthovercolor: #A68D6A;
 
     /* Spacings and Borders*/
 }
