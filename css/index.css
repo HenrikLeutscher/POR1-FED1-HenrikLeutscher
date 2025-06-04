@@ -55,8 +55,10 @@ footer,
 .ProjectCard,
 .InformationCard,
 .Phone,
-.PortFolioNav {
+.PortFolioNav,
+.Socials {
     display: flex;
+    overflow:hidden;
 }
 
 html,
@@ -74,6 +76,17 @@ body a:hover {
 header {
     height: 100vh;
     min-height: 500px;
+}
+
+.Socials img {
+    height: 50px;
+    width: 50px;
+    padding: 0px 10px 0px 10px;
+    transition: transform .2s;
+}
+
+.Socials img:hover {
+    transform: scale(1.2);
 }
 
 header,
