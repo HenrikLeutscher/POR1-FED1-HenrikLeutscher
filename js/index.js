@@ -27,7 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (shareButton) {
     shareButton.addEventListener("click", () => {
-      const shareElement = document.getElementById('copy').textContent.replace('Mobile: ', '');
+      const shareElement = document
+        .getElementById("copy")
+        .textContent.replace("Mobile: ", "");
 
       navigator.clipboard
         .writeText(shareElement)
@@ -35,14 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
           confirmation.style.display = "block";
           confirmation.style.color = "green";
           confirmation.innerHTML = `Phone Number Successfully Copied`;
-          setTimeout (() => {
+          setTimeout(() => {
             confirmation.style.display = "none";
           }, 3000);
-        }) .catch((err) => {
+        })
+        .catch((err) => {
           confirmation.style.display = "block";
           confirmation.style.color = "red";
           confirmation.innerHTML = `Issue copying phone number: ${error?.message}`;
-          setTimeout (() => {
+          setTimeout(() => {
             confirmation.style.display = "none";
           }, 3000);
         });

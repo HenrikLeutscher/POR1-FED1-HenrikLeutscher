@@ -1,6 +1,6 @@
 :root {
     /* Fonts */
-    --font:"Figtree", sans-serif;
+    --font: "Figtree", sans-serif;
 
     /* Font Sizes */
     --h1mobilefontsize: calc(4vw);

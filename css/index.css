@@ -6,27 +6,27 @@
 /* Animations */
 
 @keyframes DropDownAnim {
-	0% {
-		opacity: 0;
-		transform: translateY(-50px);
-	}
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
 
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes textAnim {
-	0% {
-		opacity: 0;
-		transform: scale(0.6);
-	}
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
 
-	100% {
-		opacity: 1;
-		transform: scale(1);
-	}
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 html, body {
@@ -58,7 +58,7 @@ footer,
 .PortFolioNav,
 .Socials {
     display: flex;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 html,
@@ -89,21 +89,23 @@ header {
     transform: scale(1.2);
 }
 
-header,
-footer {
-    background-color: var(--headerfootercolor);
-}
-
 footer {
     align-items: center;
     height: 50px;
     padding-left: 20px;
 }
 
+header img,
+.RainyDaysDropdown img,
+.ScienceMuseumDropdown img,
+.ProjectCardDropdown img,
+.AboutMe img {
+    object-fit: cover;
+}
+
 header img {
     height: 250px;
     width: 250px;
-    object-fit: cover;
     border-radius: 100%;
 }
 
@@ -151,12 +153,14 @@ body p {
 header,
 .HeaderText,
 .Projects,
+.RainyDaysDropdown,
+.ScienceMuseumDropdown,
+.ProjectCardDropdown,
 .Skills,
 .InformationCardStatic,
 .AboutMe,
 .ContactInfo {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -168,10 +172,13 @@ header,
     align-items: center;
 }
 
-.ProjectCardDropdown {
+.ProjectCardDropdown,
+.confirmation {
     display: none;
 }
 
+header,
+footer,
 .ProjectCardDropdown,
 .ProjectCard,
 .Skills,
@@ -181,20 +188,30 @@ header,
     background-color: var(--headerfootercolor);
 }
 
-.ProjectCard:hover {
+.ProjectCard:hover,
+.Phone button:hover {
     cursor: pointer;
     background-color: var(--hovercolor);
 }
 
 .ProjectCardDropdown.show {
-    justify-content: center;
     animation: DropDownAnim 1s ease 0s 1 normal forwards;
     padding-bottom: 20px;
     margin-top: -8px;
 }
 
-.Descrip {
+.ProjectCardDropdown.show,
+.Descrip,
+.ProjectCard,
+.ProjectCardDropdown,
+.InformationCardStatic,
+.InformationCardSkills,
+.InformationCard,
+.PortFolioNav {
     justify-content: center;
+}
+
+.Descrip {
     width: 80%;
 }
 
@@ -202,19 +219,11 @@ header,
 .ProjectCardDropdown,
 .InformationCardStatic,
 .InformationCardSkills {
-    justify-content: center;
     width: 90%;
     max-width: 500px;
     border-bottom: 2px solid var(--bordercolor);
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-.RainyDaysDropdown,
-.ScienceMuseumDropdown,
-.ProjectCardDropdown {
-    flex-direction: column;
-    align-items: center;
 }
 
 .RainyDaysDropdown img,
@@ -223,7 +232,6 @@ header,
     margin: 20px;
     width: 90%;
     height: 200px;
-    object-fit: cover;
     object-position: 0% 50%;
 }
 
@@ -239,8 +247,8 @@ header,
 }
 
 .hidden {
-  opacity: 0;
-  pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .ProjectCardDropdown {
@@ -256,11 +264,9 @@ header,
 .AboutMe img {
     margin: 20px;
     width: calc(10rem);
-    object-fit: cover;
 }
 
 .InformationCard {
-    justify-content: center;
     width: 90%;
     max-width: 500px;
     border-bottom: 2px solid var(--bordercolor);
@@ -279,17 +285,8 @@ header,
     margin: 5px 20px 5px 20px;
 }
 
-.Phone button:hover {
-    background-color: var(--hovercolor);
-}
-
-.confirmation {
-    display: none;
-}
-
 .PortFolioNav {
     margin-top: auto;
-    justify-content: center;
     width: 90%;
     max-width: 500px;
     border-bottom: 3px var(--bordercolor) solid;
