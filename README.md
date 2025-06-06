@@ -6,6 +6,8 @@
 
 POR1 - First years last Assignment, where we were tasked to create a personal portfolio website from scratch with Vanilla HTML, CSS and JavaScript, featuring 3 of the projects we have done the last year / 2 semesters. Putting our skills and knowledge to use.
 
+This portfolio does also contain my current Skills aswell as a litle about me section.
+
 ## Built With
 
 HTML - CSS - JavaScript
