@@ -274,10 +274,9 @@ header,
 .Phone button {
     background-color: transparent;
     border-style: none;
-    border-radius: 20px;
-    font-size: var(--h1mobilefontsize);
-    padding: 5px 20px 5px 20px;
-    margin-left: 20px;
+    border-radius: 10px;
+    font-size: var(--h2mobilefontsize);
+    margin: 5px 20px 5px 20px;
 }
 
 .Phone button:hover {
