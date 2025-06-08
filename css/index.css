@@ -151,7 +151,7 @@ body p {
 }
 
 header {
-    padding-top: 180px;
+    padding-top: calc(20vh);
 }
 
 header,

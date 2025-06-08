@@ -31,3 +31,9 @@
         justify-items: space-evenly;
     }
 }
+
+@media (max-height: 589px) {
+    header {
+    padding-top: 50px;
+    }
+}
