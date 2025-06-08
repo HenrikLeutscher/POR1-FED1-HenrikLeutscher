@@ -27,12 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (shareButton) {
     shareButton.addEventListener("click", () => {
-      const shareElement = document
-        .getElementById("copy")
-        .textContent.replace("Mobile: ", "");
+      const shareNumber = document.getElementById("copy").textContent.replace("Mobile: ", "");
 
       navigator.clipboard
-        .writeText(shareElement)
+        .writeText(shareNumber)
         .then(() => {
           confirmation.style.display = "block";
           confirmation.style.color = "green";
