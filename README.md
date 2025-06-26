@@ -20,6 +20,30 @@ This portfolio does also contain my current Skills aswell as a litle about me se
 
 HTML - CSS - JavaScript
 
+# Getting Started:
+
+### Installing
+
+1. Clone the repo:
+
+```bash
+git clone git@github.com:HenrikLeutscher/POR1-FED1-HenrikLeutscher/tree/main
+```
+
+2. Install the dependencies:
+
+```
+npm install
+```
+
+### Running
+
+To run the app, run the following commands:
+
+```bash
+npm run start
+```
+
 ## Contact
 
 [My LinkedIn page](https://www.linkedin.com/in/henrik-leutscher/)
